@@ -1,9 +1,11 @@
 import './App.css';
+import ShoppingItem from './component/ShoppingItem';
+
 
 const App = () => {
   return (
     <div>
-      Welcome To First Session
+      <ShoppingItem />
     </div>
   );
 }
