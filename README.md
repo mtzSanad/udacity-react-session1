@@ -32,6 +32,6 @@ JSX is sytax sugar to help us write a simpler code that will be transformed to J
 
 ## The old way of handling DOM without react
 
-check out branch dom-old-way
+Check out [wc3School](https://www.w3schools.com/jsref/met_node_appendchild.asp) 
 
 
