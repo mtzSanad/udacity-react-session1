@@ -36,10 +36,10 @@ Check out [wc3School](https://www.w3schools.com/jsref/met_node_appendchild.asp)
 
 ## Building first component
 
-1- Design wireframe.
-2- Create component folder.
-3- Categorize your components under component folder and create subfolders if required.
-4- Note that attribute names like className insted of class because it is reserved by js syntax.
-5- We can run JS expressions inside {}.
+1. Design wireframe.
+2. Create component folder.
+3. Categorize your components under component folder and create subfolders if required.
+4. Note that attribute names like className insted of class because it is reserved by js syntax.
+5. We can run JS expressions inside {}.
 
 
