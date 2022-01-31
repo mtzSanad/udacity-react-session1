@@ -1,9 +1,9 @@
 import React from 'react';
 import  './ShoppingItem.css'
 
-const ShoppingItem = () => {
-  const headerName = "T-shirt1";  
-  const imgSrc = "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dCUyMHNoaXJ0fGVufDB8fDB8fA%3D%3D&w=1000&q=80";
+const ShoppingItem = (props) => {
+  //Destructuring props object
+  const {headerName, imgSrc} = props;
 
   const colorArray =['green','red','yellow']
 
