@@ -12,7 +12,10 @@ const ShoppingItem = () => {
         {headerName}
       </header>
       <section className="card-body">
-        <img className="img" src={imgSrc} alt={headerName} />
+        <div className="box-container">
+          <img className="img" src={imgSrc} alt={headerName} />
+          <div className='desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis asperiores et labore numquam modi nemo saepe explicabo maiores exercitationem eveniet?</div>
+        </div>
         <div className="box-container">
             {colorArray.map( element => (<div className={`small-box ${element}`}></div>) )}
         </div>

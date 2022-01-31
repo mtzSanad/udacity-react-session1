@@ -4,7 +4,7 @@ import ShoppingItem from './component/ShoppingItem';
 
 const App = () => {
   return (
-    <div>
+    <div className='container'>
       <ShoppingItem />
     </div>
   );

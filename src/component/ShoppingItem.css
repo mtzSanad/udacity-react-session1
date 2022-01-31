@@ -1,13 +1,23 @@
 .card{
     width: 500px;
-    height: 500px;
+    height: auto;
     border: 1px solid black;
     border-radius: 3px;
+    margin: 10px;
+}
+
+.card-header{
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 5px;
 }
 
 .small-box{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
     border: 1px solid black;
 }
 
@@ -41,5 +51,16 @@
 .full-button{
     width: 100%;
     height: 30px;
-    background-color: yellowgreen;
+    background-color: white;
+    cursor: pointer;
+}
+
+.full-button:hover{
+    background-color: black;
+    color: white;
+}
+
+.desc{
+    text-align: justify;
+    margin-right: 5px;
 }
