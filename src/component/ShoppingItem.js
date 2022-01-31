@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ShoppingItem.css";
 
 const ShoppingItem = (props) => {
@@ -13,7 +13,36 @@ const ShoppingItem = (props) => {
     <div key={key} className={`small-box ${element}`}></div>
   ));
 
+  //Crating itemStock as component state using useState hook
+  //useState parameter is used only once for initialization if the state is initialized it will not re-initialize again.
+  //I will be using diffrent variables to handle itemStock that will act as component state
+  //Make sure you are using const here, so you don't accedintly update the variable direct without the setter
+  const [stock, setStock] = useState(itemStock);
+
   //Function that is responsible of buying items, which will decrease the stockItem count till zero.
+  const buyItem = (event) => {
+    if (stock > 0) {
+      console.log(`Stock before is ${stock}`);
+      //I am relying on stock state not itemStock
+      //IMPORTANT - This will not work because still react dosn't know you have changed the state
+      //So you must use the setter and not directly change the state
+      //stock = stock - 1;
+
+      //This should work properly but this is not the best practice
+      //React batch the updates and dosen't excute state update immediatly, it first check the priority and can later do the update
+      //setStock(stock - 1);
+
+      //Use this way always it will make sure you have the correct previous state
+      setStock((prevStock) => prevStock - 1);
+
+      //This will not be affected even if we have decreased stock by 1, WHY?
+      //As we mentioned above react batch these update and do it later, you properly will not notice this in most cases
+      console.log(`Stock after is ${stock}`);
+    }
+  };
+
+  /**   HOW-YOU-SHOULD-NOT update updatable component parts! use component state.
+   //Function that is responsible of buying items, which will decrease the stockItem count till zero.
   //This function will not work correctly, because we are not using the state
   //Clicking this function will log and modify the itemStock but UI will not be affected! Why?
   //Because React dosn't know that we have changed the variable and we didn't told react to re-render!
@@ -25,6 +54,7 @@ const ShoppingItem = (props) => {
       console.log(itemStock);
     }
   };
+   */
 
   return (
     <div className="card">
@@ -36,7 +66,7 @@ const ShoppingItem = (props) => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
             asperiores et labore numquam modi nemo saepe explicabo maiores
             exercitationem eveniet?
-            <div className="stock">Stock : {itemStock}</div>
+            <div className="stock">Stock : {stock}</div>
           </div>
         </div>
         <div className="box-container">{colorComponent}</div>
