@@ -63,4 +63,13 @@
 .desc{
     text-align: justify;
     margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between ;
+}
+
+.stock{
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 5px;
 }
