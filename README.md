@@ -21,7 +21,7 @@ Always rememeber coding is fun so have fun 😃
 
 - Simple way is to use 
 ```
-    npx create-reac-app applicationName
+    npx create-react-app application-name
 ```
 - Then you can start your project using 
 ```
